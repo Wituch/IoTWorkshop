@@ -16,7 +16,7 @@ namespace SendC2D
             _serviceClient = ServiceClient.CreateFromConnectionString(_connectionString);
             Console.WriteLine("Press any key to send a C2D message.");
             Console.ReadLine();
-            SendCloudToDeviceMessageAsync("Cloud to device message").Wait();
+            SendCloudToDeviceMessageAsync("Cloud to device message. Hello!").Wait();
             Console.ReadLine();
         }
 
