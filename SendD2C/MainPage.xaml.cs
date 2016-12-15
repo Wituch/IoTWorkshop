@@ -25,6 +25,8 @@ namespace SendD2C
         public MainPage()
         {
             this.InitializeComponent();
+            var cloudSender  = new CloudSender();
+            cloudSender.SendWeatherData();
         }
     }
 }

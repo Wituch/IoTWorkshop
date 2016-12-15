@@ -9,9 +9,9 @@ namespace SendD2C
     public class CloudSender
     {
         private DeviceClient _deviceClient;
-        private string _iotHubUri = "Workshops.azure-devices.net";
+        private string _iotHubUri = "SimpleWeatherHub.azure-devices.net";
         private string _deviceName = "myRaspi";
-        private string _deviceKey = "K6E8/W2t6kzLLco9F6MKE1k7bEf9BNTqw6nyrnqILUo=";
+        private string _deviceKey = "douBC/ePxlZHHLYs8vMkqvUOlSgr1GvH1qxYf0zUeWU=";
 
         public CloudSender()
         {
@@ -42,7 +42,7 @@ namespace SendD2C
             var messageString = JsonConvert.SerializeObject(data);
             var message = new Message(Encoding.ASCII.GetBytes(messageString));
             await _deviceClient.SendEventAsync(message);
-            Task.Delay(10000).Wait();
+            Task.Delay(1000).Wait();
         }
     }
 }
